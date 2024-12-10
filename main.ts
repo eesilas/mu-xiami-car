@@ -1,3 +1,4 @@
+let var_res = 0
 muvision.begin(MuId.Mu00, MuVsMode.kI2CMode)
 muvision.visionBegin(MuId.Mu00, MuStatus.Enable, MuVsMessageVisionType.kVisionTrafficCard)
 muvision.cameraSetAwb(MuId.Mu00, MuVsCameraWhiteBalance.kAutoWhiteBalance)
