@@ -8,14 +8,22 @@ basic.forever(function () {
         xiamiBoard.motorRun(MOTOR.M1, DIRECTION.CW, 0)
         xiamiBoard.motorRun(MOTOR.M2, DIRECTION.CW, 0)
     } else if (muvision.trafficCardType(MuId.Mu00, muvision.TrafficCardType.TrafficCardLeft)) {
-    	
+        xiamiBoard.motorRun(MOTOR.M1, DIRECTION.CW, 65)
+        xiamiBoard.motorRun(MOTOR.M2, DIRECTION.CW, 45)
     } else if (muvision.trafficCardType(MuId.Mu00, muvision.TrafficCardType.TrafficCardRight)) {
-    	
+        xiamiBoard.motorRun(MOTOR.M1, DIRECTION.CW, 45)
+        xiamiBoard.motorRun(MOTOR.M2, DIRECTION.CW, 65)
     } else if (muvision.trafficCardType(MuId.Mu00, muvision.TrafficCardType.TrafficCardPark)) {
-    	
+        xiamiBoard.motorRun(MOTOR.M1, DIRECTION.CW, 0)
+        xiamiBoard.motorRun(MOTOR.M2, DIRECTION.CW, 0)
     } else if (muvision.trafficCardType(MuId.Mu00, muvision.TrafficCardType.TrafficCardTURN_AROUND)) {
-    	
+        xiamiBoard.motorRun(MOTOR.M1, DIRECTION.CCW, 65)
+        xiamiBoard.motorRun(MOTOR.M2, DIRECTION.CCW, 65)
+        basic.pause(500)
+        xiamiBoard.motorRun(MOTOR.M1, DIRECTION.CCW, 65)
+        xiamiBoard.motorRun(MOTOR.M1, DIRECTION.CW, 65)
+        basic.pause(500)
     } else {
-    	
+        basic.showIcon(IconNames.Yes)
     }
 })
